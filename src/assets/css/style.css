@@ -53,7 +53,7 @@ ul li {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
- background: url(../common/menu-bg.svg) no-repeat scroll right center / cover, rgba(0, 0, 0, 0) url(../common/menu-shado.png) no-repeat scroll right center / auto 100%;
+ background: url(../images/menu-bg.svg) no-repeat scroll right center / cover, rgba(0, 0, 0, 0) url(../images/menu-shado.png) no-repeat scroll right center / auto 100%;
   height: 100%;
   left: 220px;
   margin-left: -220px;
@@ -267,6 +267,9 @@ ul li {
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
+.overlay.active{
+    display: block;
+}
 .social-menu {
     bottom: 30px;
     left: 10px;
@@ -311,7 +314,7 @@ ul li {
      font-family: 'Montserrat';
 }
 .header-bg {
-    background: rgba(0, 0, 0, 0) url(../common/bg-hd.png) no-repeat scroll right 18% bottom / auto 100%;
+    background: rgba(0, 0, 0, 0) url(../images/bg-hd.png) no-repeat scroll right 18% bottom / auto 100%;
     height: 100%;
     left: 0;
     position: absolute;
@@ -323,7 +326,7 @@ ul li {
     text-transform: uppercase;
 }
 .header-text {
-    background: rgba(0, 0, 0, 0) url(../common/header-text-bg.png) no-repeat scroll left center / auto 100%;
+    background: rgba(0, 0, 0, 0) url(../images/header-text-bg.png) no-repeat scroll left center / auto 100%;
     padding: 80px 0 30px 150px;
 }
 /**** about *****************/
@@ -368,7 +371,7 @@ ul li {
     width: 100px;
 }
 .about-area {
-    background: rgba(0, 0, 0, 0) url("../common/about-angle-bg.png") no-repeat fixed left -15% center/ 40% auto;
+    background: rgba(0, 0, 0, 0) url("../images/about-angle-bg.png") no-repeat fixed left -15% center/ 40% auto;
 }
 
 .about-photo {
@@ -389,10 +392,18 @@ ul li {
     -webkit-transition: 0.3s;
     transition: 0.3s;
 }
-
+.about-photo:hover .about-address{
+    opacity:1;
+    visibility:visible;
+    height: 180px;
+    transition: 0.3s;
+}
 .about-address {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     margin-top: 40px;
+    transition: 0.3s;
+    height: 0px;
 }
 
 .about-photo .about-desc::before {
@@ -469,7 +480,7 @@ ul li {
 .process-area,
 .profile-area,
 .client-area {
-    background-image: url("../common/project-circle-bg.png");
+    background-image: url("../images/project-circle-bg.png");
     background-position: right -20% bottom 50%;
     background-repeat: no-repeat;
     background-size: 50% auto;
@@ -478,7 +489,7 @@ ul li {
 
 .process-area,
 .profile-area {
-    background-image: url("../common/process-angle-bg.png");
+    background-image: url("../images/process-angle-bg.png");
     background-position: right -15% bottom 30%;
     background-size: 40% auto;
 }
@@ -907,7 +918,7 @@ Prosess-Area=======================*/
     background-color: #EBEBEB;
 }
 .project-area, .process-area, .profile-area, .client-area {
-    background-image: url(../common/project-circle-bg.png);
+    background-image: url(../images/project-circle-bg.png);
     background-position: right -20% bottom 50%;
     background-repeat: no-repeat;
     background-size: 50% auto;
